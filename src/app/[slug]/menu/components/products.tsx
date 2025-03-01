@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
+import { formatCurrency } from "@/helpers/format-currency";
+
 interface ProductsProps {
   products: Product[];
 }
@@ -24,10 +26,7 @@ const { slug}  = useParams<{slug: string}>();
               {product.description}
             </p>
             <p className="pt-3 text-sm font-semibold">
-              {Intl.NumberFormat("en-US", {
-                style: "currency",
-                currency: "USD",
-              }).format(product.price / 6)}
+              {formatCurrency(product.price)}
             </p>
           </div>
           <div>
