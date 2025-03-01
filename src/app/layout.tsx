@@ -3,11 +3,12 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 
+import { CartProvider } from "./[slug]/menu/contexts/cart";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"] 
-})
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "VIG Donalds",
@@ -21,10 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.className}`}
-      >
-        {children}
+      <body className={`${poppins.className}`}>
+        <CartProvider>{children}</CartProvider>
       </body>
     </html>
   );
