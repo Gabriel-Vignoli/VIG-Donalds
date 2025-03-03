@@ -26,7 +26,7 @@ const handleBackClick = () => router.back()
         <ChevronLeftIcon></ChevronLeftIcon>
       </Button>
      
-        <Image src={product.imageUrl} alt={product.name} layout="fill" className="object-cover">
+        <Image src={product.imageUrl} alt={product.name} fill className="object-cover">
         </Image>
 
       <Button
