@@ -125,7 +125,7 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                     <FormLabel>Your CPF</FormLabel>
                     <FormControl>
                       <PatternFormat
-                        placeholder="Digite seu CPF..."
+                        placeholder="Write your CPF..."
                         format="###.###.###-##"
                         customInput={Input}
                         {...field}
